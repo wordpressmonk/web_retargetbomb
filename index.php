@@ -1,7 +1,7 @@
 <?php 
 echo "<h1 align='center' >Please Wait Loading...</h1>";
 <?php 
-require_once("git_connect.php"); 
+require_once("connect.php"); 
 $slug = $_REQUEST['s'];
 $userId = $_REQUEST['u'];
 if($slug!='' && $userId!=''){
