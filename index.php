@@ -1,6 +1,5 @@
 <?php 
 echo "<h1 align='center' >Please Wait Loading...</h1>";
-<?php 
 require_once("connect.php"); 
 		$connectionurl = "host=".servername." port=5432 dbname=".database." user=".username." password=".password."";
 		$dbconn3 = pg_pconnect($connectionurl);
