@@ -1,17 +1,6 @@
 <?php 
 echo "<h1 align='center' >Please Wait Loading...</h1>";
 require_once("connect.php"); 
-		$connectionurl = "host=".servername." port=5432 dbname=".database." user=".username." password=".password."";
-		$dbconn3 = pg_pconnect($connectionurl);
-		if (!$dbconn3) {
-		die("Error in connection: " . pg_last_error());
-		}
-		$sqlHits = "SELECT * from retarget_link";		
-		$result = pg_query($dbconn3,$sqlHits);
-		$arr = pg_fetch_array($result,NULL, PGSQL_ASSOC);
-		echo "<pre>";
-		print_r($arr);
-		echo "</pre>";
 $slug = $_REQUEST['s'];
 $userId = $_REQUEST['u'];
 if($slug!='' && $userId!=''){
