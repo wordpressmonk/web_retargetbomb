@@ -9,5 +9,9 @@ $url = "http://retargetbomb.herokuapp.com/link/?s=$s&u=$u";
 }else {
 $url = "http://retargetbomb.herokuapp.com/link/";		
 }
-file_get_content($url);
+//file_get_content($url);
+header("location:$url");
+exit;
+
+
 ?>
