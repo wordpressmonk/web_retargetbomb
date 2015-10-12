@@ -2,9 +2,15 @@
 echo "<h1 align='center' >Please Wait Loading...</h1>";
 require_once("connect.php"); 
 $aKeys = array_keys($_REQUEST);
+echo "<pre>";
+print_r($aKeys);
+echo "</pre>";
 $rawData = explode("-",$aKeys[0]);
 $slug = $rawData[0];
 $userId = $rawData[1];
+echo "<pre>";
+print_r($rawData);
+echo "</pre>";
 if($slug!='' && $userId!=''){
 /* ip address count start   */
 		$ip = $_SERVER["REMOTE_ADDR"];
