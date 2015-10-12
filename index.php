@@ -1,5 +1,5 @@
 <?php 
-echo "<h1 align='center' >Please Wait Loading...</h1>";
+echo "<h1 align='center' >Please Wait Loading...Updates...</h1>";
 require_once("connect.php"); 
 $aKeys = array_keys($_REQUEST);
 echo "<pre>";
