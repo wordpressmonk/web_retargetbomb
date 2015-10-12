@@ -70,7 +70,7 @@ if($slug!='' && $userId!=''){
 		<?php if(!empty($redirection)):?>
 		setTimeout(function(){
 			window.location = "<?php echo $redirection; ?>";
-		},600);
+		},50);
 		<?php endif; ?>
 	</script>
 </head><body> </body></html>
