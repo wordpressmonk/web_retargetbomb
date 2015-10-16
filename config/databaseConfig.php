@@ -6,6 +6,7 @@ define("servername", getenv("servername"));
 define("database", getenv("database"));
 define("username", getenv("username"));
 define("password", getenv("password"));
+define("alport", getenv("alport"));
 define("developer", true);
 ?>
 
