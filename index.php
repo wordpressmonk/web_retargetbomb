@@ -53,6 +53,7 @@ if($slug!='' && $userId!=''){
 	}	
 	$redirection = $urlStep2;
 	$jsCode = $arr['track_standard_code'];
+	pg_close($connectionurl);
 	/* get all data  */
 }
 
