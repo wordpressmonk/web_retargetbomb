@@ -12,7 +12,7 @@ class Database{
  
     public function __construct(){
         // Set DSN
-        $dsn = 'pgsql:host=' . $this->host . ';dbname=' . $this->dbname;
+	$dsn = 'pgsql:host=' . $this->host . ';port='.alport.';dbname=' . $this->dbname;        
         // Set options
         $options = array(
             PDO::ATTR_PERSISTENT    => true,
