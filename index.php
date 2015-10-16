@@ -52,7 +52,14 @@ if($slug!='' && $userId!=''){
 		$urlStep2 = $urlStep1;
 	}	
 	$redirection = $urlStep2;
-	$jsCode = $arr['track_standard_code'];
+/* get Tracking Code start */	
+	//$jsCode = $arr['track_standard_code'];	
+	$alslugIds = 'tracking_code_'.$arr['id'];
+	$sqlTrackingcode = "SELECT * FROM retarget_settings WHERE  skey =  '$alslugIds' AND userId = '$userId'";	
+	$resultTC = pg_query($dbconn3,$sqlTrackingcode);
+	$arrTc = pg_fetch_array($resultTC,NULL, PGSQL_ASSOC);			
+	$jsCode = $arrTc['sval'];
+	/* get Tracking Code end */	
 	pg_close($connectionurl);
 	/* get all data  */
 }
