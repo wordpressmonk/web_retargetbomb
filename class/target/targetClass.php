@@ -4,7 +4,7 @@ class targetClass {
 	
 	static public function addIpCount($params){
 		
-		$connectionurl = "host=".servername." port=5432 dbname=".database." user=".username." password=".password."";
+		$connectionurl = "host=".servername." port=".alport." dbname=".database." user=".username." password=".password."";
 		$dbconn3 = pg_pconnect($connectionurl);
 		if (!$dbconn3) {
 		die("Error in connection: " . pg_last_error());
