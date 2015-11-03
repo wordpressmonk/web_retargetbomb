@@ -67,6 +67,8 @@ if($slug!='' && $userId!=''){
 		$redition_sleep = 50;	
 	} else if($arr['locaion']==0){
 		$redition_sleep = 50;
+	} else if($arr['locaion']==''){		
+		$redition_sleep = 50;
 	} else {
 		$redition_sleep = $arr['locaion']*1000;
 	}
