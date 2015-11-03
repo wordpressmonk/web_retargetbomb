@@ -62,6 +62,15 @@ if($slug!='' && $userId!=''){
 	/* get Tracking Code end */	
 	pg_close($connectionurl);
 	/* get all data  */
+	/* Redirection Delay Start */
+	if($arr['locaion']=='not yet set'){
+		$redition_sleep = 50;	
+	} else if($arr['locaion']==0){
+		$redition_sleep = 50;
+	} else {
+		$redition_sleep = $arr['locaion']*1000;
+	}
+	/* Redirection Delay End */		
 }
 
 ?>
@@ -75,10 +84,10 @@ if($slug!='' && $userId!=''){
 		}		
 	?>
 	<script type="text/javascript">
-		<?php if(!empty($redirection)):?>
+		<?php if(!empty($redirection)):?>		
 		setTimeout(function(){
 			window.location = "<?php echo $redirection; ?>";
-		},50);
+		},<?=$redition_sleep?>);
 		<?php endif; ?>
 	</script>
 </head><body> </body></html>
