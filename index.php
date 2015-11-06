@@ -1,5 +1,4 @@
 <?php 
-echo "<h1 align='center' >Please Wait Loading...</h1>";
 require_once("connect.php"); 
 $aKeys = array_keys($_REQUEST);
 $rawData = explode("-",$aKeys[0]);
@@ -92,4 +91,4 @@ if($slug!='' && $userId!=''){
 		},<?=$redition_sleep?>);
 		<?php endif; ?>
 	</script>
-</head><body> </body></html>
+</head><body><h1 align='center' >Please Wait Loading...</h1> </body></html>
